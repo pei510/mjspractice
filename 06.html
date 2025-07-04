@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    測試資料如下
+    <!-- 90
+10
+-2 => err！不是有效範圍0-100，請重新輸入！
+30
+100
+a => err！非數字，請重新輸入！
+66
+-1 => 結束 -->
+
+<!-- 及格人數
+不及格人數
+全班總分
+全班平均 -->
+    <p id="result">結果</p>
+
+    <script>
+        while (1) {
+            var score =parseInt(prompt("請輸入分數"));
+            if (score == null) {
+                break;
+            } else if (score < 0) {
+                alert("err!不是有效範圍0-100,請重新輸入!");
+                continue;
+            } else if (isNaN(Number(score))) {
+                alert("err!非數字,請重新輸入!");
+                continue;
+            } else if (score == -1) {
+                continue;
+            }
+
+            // 及格人數
+            
+        }
+         num=(score >= 60 || score <= 0)
+        if (score >= 60 ) {
+            num++
+        }else if(score < 60)
+    
+              
+             
+
+              }
+
+
+
+    </script>
+</body>
+
+</html>
