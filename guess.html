@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var answer = Math.floor(Math.random() * 100) + 1;
+        var answer = 60;
+        var min = 1;
+        var max = 100;
+
+        do {
+            guess = prompt(`請輸入${min}~${max}的數字`);
+            if (guess === null) {
+                alert("遊戲結束");
+                break;
+            }
+
+            guess = Number(guess);
+
+            if (isNaN(guess)) {
+                alert("請輸入有效的數字！");
+                continue;
+            }
+
+            if (guess < min || guess > max) {
+                alert(`請輸入 ${min}~${max} 範圍內的數字！`);
+                continue;
+            }
+
+            if (guess < answer) {
+                min = guess + 1;
+                alert(`${guess} => 太小了（提示：${min}-${max}）`);
+            } else if (guess > answer) {
+                max = guess - 1;
+                alert(`${guess} => 太大了（提示：${min}-${max}）`);
+            } else {
+                alert(`恭喜你猜對了！答案就是 ${answer}`);
+                break;
+            }
+        } while (true);
+
+    </script>
+</body>
+
+</html>
